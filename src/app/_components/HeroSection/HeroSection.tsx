@@ -27,7 +27,7 @@ export default function HeroSection() {
       >
         <Image
           alt="HeroSection"
-          src="/front3.jpeg"
+          src="/hero.svg"
           width={400}
           height={700}
           className="hidden  lg:block h-screen w-[30vw] object-cover opacity-50 hover:opacity-100 transition-opacity duration-1000"

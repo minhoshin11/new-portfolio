@@ -13,7 +13,7 @@ export default function LeftCard() {
       <div className="flex gap-[30px] flex-col sm:flex-row sm:gap-4 lg:flex-col 2xl:flex-col">
         <div className="gap-[5vh] md:gap-0 relative w-[200px] h-[250px] overflow-hidden rounded-2xl">
           <Image
-            src="/me.jpg"
+            src="/me.svg"
             alt="이미지"
             fill={true}
             priority={true}
