@@ -11,7 +11,7 @@ export default function ImageCard() {
       <div className="flex  flex-col gap-11 justify-between">
         <div className="flex flex-col gap-2">
           <p className="font-semibold text-4xl ">Main</p>
-          <div className="flex flex-row rounded-2xl border bg-white">
+          <div className="flex flex-row rounded-2xl border bg-gray-100">
             {Object.entries(mainImageUrl).map(([key, src]) => {
               return (
                 <div key={key} className="p-2 ">
@@ -29,7 +29,7 @@ export default function ImageCard() {
         </div>
         <div className="flex flex-col gap-2">
           <p className="font-semibold text-4xl ">Familiar</p>
-          <div className="flex flex-row rounded-2xl border bg-white">
+          <div className="flex flex-row rounded-2xl border bg-gray-100">
             {Object.entries(subImageUrl).map(([key, src]) => {
               return (
                 <div key={key} className="p-2 ">
@@ -38,7 +38,7 @@ export default function ImageCard() {
                     height={100}
                     src={src}
                     alt={`${key} 이미지`} // alt 텍스트는 각 이미지에 따라 다르게 설정
-                    className=" text-white p-1"
+                    className="text-white p-1"
                   />
                 </div>
               );
@@ -47,7 +47,7 @@ export default function ImageCard() {
         </div>
         <div className="flex flex-col gap-2">
           <p className="font-semibold text-4xl ">Click</p>
-          <div className="flex flex-row items-center justify-center p-2 gap-[10vw] rounded-2xl border bg-white">
+          <div className="flex flex-row items-center justify-center p-2 gap-[10vw] rounded-2xl border bg-gray-100">
             <Link
               href="https://github.com/minhoshin11"
               target="_blank"

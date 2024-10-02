@@ -16,12 +16,14 @@ export default function Card({ project }: CardProps) {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.5 } }} // 사라지는 애니메이션
-        className="relative w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-[30vh] perspective-[1000px]"
+        className="border relative w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-[30vh] perspective-[1000px] rounded-3xl overflow-hidden shadow-3xl"
       >
         {/* 카드 컨테이너 */}
         <div className="w-full h-full transition-all duration-500 transform-style-preserve-3d hover:opacity-100">
           {/* 카드 앞면 */}
-          <div className="bg-white absolute w-full h-full ">
+          <div className="bg-white absolute w-full h-full rounded-lg ">
+            {" "}
+            {/* 여기에 rounded-lg 추가 */}
             <img
               src={project.thumbnail}
               alt={project.title}
@@ -30,7 +32,9 @@ export default function Card({ project }: CardProps) {
           </div>
 
           {/* 카드 뒷면 - 호버 시 나타나는 텍스트 */}
-          <div className="absolute w-full h-full p-4 bg-white text-black opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-between items-center text-center overflow-hidden">
+          <div className="absolute w-full h-full p-4 bg-white text-black opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-between items-center text-center overflow-hidden rounded-lg">
+            {" "}
+            {/* 여기에 rounded-lg 추가 */}
             <div className="overflow-y-scroll h-full w-full">
               <h2 className="text-lg font-bold">{project.title}</h2>
               <p className="text-sm mt-2">{project.subtitle}</p>
@@ -96,12 +100,11 @@ export default function Card({ project }: CardProps) {
         <Link
           href={`/project/${project.id}`}
           // target="_blank"
-          className="absolute bottom-2 right-2 p-3 rounded-2xl bg-violet-400 text-white text-sm hover:text-black transition-colors duration-500"
+          className="absolute bottom-2 right-2 p-3 rounded-full bg-violet-400 text-white text-sm hover:text-black transition-colors duration-500" // 여기에 rounded-full로 버튼 둥글게
         >
           보러가기
         </Link>
       </motion.div>
-      )
     </AnimatePresence>
   );
 }

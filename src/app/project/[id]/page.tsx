@@ -36,24 +36,24 @@ export default function Page() {
         <div className="flex flex-col lg:flex-row flex-start w-full lg:mx-[3vw] py-[3vh] gap-14 px-1">
           <ImageCarousel project={project} />
           <div className="flex flex-col justify-start gap-4 items-start lg:mx-0 mx-[5vw]">
-            <h4 className="w-[150px] border border-blue-400 bg-blue-800 font-bold text-lg rounded-3xl flex justify-center p-1">
+            <h4 className="w-[150px] border border-blue-400 bg-blue-800 text-2xl rounded-3xl flex justify-center p-1">
               {project?.division}
             </h4>
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-blue-500">목표</p>
-              <p className="flex gap-2 items-center text-xl font-semibold">
+              <p className="flex gap-2 items-center text-xl">
                 <FiTarget className="hidden md:block" /> {project?.purpose}
               </p>
             </div>
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-blue-500">기간</p>
-              <p className="flex gap-2 items-center text-xl font-semibold">
+              <p className="flex gap-2 items-center text-xl">
                 <SlCalender className="hidden md:block" /> {project?.period}
               </p>
             </div>
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-blue-500">인원</p>
-              <p className="flex gap-2 items-center text-xl font-semibold">
+              <p className="flex gap-2 items-center text-xl">
                 <MdPeopleAlt className="hidden md:block" /> {project?.members}
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function Page() {
                   return (
                     <li
                       key={i}
-                      className="border flex rounded-2xl px-[10px] py-[5px] bg-blue-900 border-blue-500 font-semibold"
+                      className="border flex rounded-2xl px-[10px] py-[5px] bg-blue-900 border-blue-500"
                     >
                       {stack}
                     </li>
@@ -80,7 +80,7 @@ export default function Page() {
                 {project?.role.map((item, index) => {
                   return (
                     <li
-                      className="border flex rounded-2xl px-[10px] py-[5px] bg-blue-900 border-blue-500 font-semibold"
+                      className="border flex rounded-2xl px-[10px] py-[5px] bg-blue-900 border-blue-500"
                       key={index}
                     >
                       {item}
@@ -90,13 +90,13 @@ export default function Page() {
               </ul>
             </div>
             <div className="my-1 flex gap-2 flex-col">
-              <h3 className="text-blue-500 font-bold text-2xl">문제 및 해결</h3>
+              <h3 className="text-blue-500 text-2xl">문제 및 해결</h3>
               {project?.solving.map((item, index) => (
-                <div key={index} className="ml-2 mb-4">
-                  <p className="font-semibold text-lg">
+                <div key={index} className="ml-2 mb-2">
+                  <p className=" text-[21px]">
                     <span className="text-red-500">문제 - </span> {item.problem}
                   </p>
-                  <p className="font-semibold text-lg">
+                  <p className=" text-[21px]">
                     <span className="text-green-500">해결 - </span> {item.solve}
                   </p>
                 </div>

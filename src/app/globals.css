@@ -17,7 +17,10 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Do Hyeon", sans-serif; /* Do Hyeon 폰트 적용 */
+  font-size: large;
+  font-weight: 200;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 @layer utilities {

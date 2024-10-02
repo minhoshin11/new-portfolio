@@ -30,9 +30,13 @@ export default function CopyNumber({ type }: { type: MyNumber }) {
     <div className="flex flex-col h-[5vw]">
       <button
         onClick={copyToClipboard}
-        className="px-4 py-2 text-white bg-blue-500 rounded-xl hover:bg-blue-700 transition-colors duration-300"
+        className={`px-4 py-2 text-white rounded-xl transition-colors duration-300 ${
+          copySuccess
+            ? "bg-green-600 hover:bg-green-500"
+            : "bg-blue-500 hover:bg-blue-700"
+        }`}
       >
-        {copySuccess ? "복사완료!" : type}
+        {copySuccess ? "Copied !" : type}
       </button>
     </div>
   );
