@@ -31,6 +31,7 @@ export default function HeroSection() {
           width={400}
           height={700}
           className="hidden  lg:block h-screen w-[30vw] object-cover opacity-50 hover:opacity-100 transition-opacity duration-1000"
+          draggable="false"
         />
         {loading ? (
           <div className="h-full w-[30vw] flex items-center justify-center">
@@ -70,7 +71,7 @@ export default function HeroSection() {
 
             <FaAnglesDown
               onClick={() => handleScroll("#aboutSection")}
-              className="animate-bounce-slow cursor-pointer absolute hidden lg:block bottom-0 mb-[15vh] ml-[20vw] w-[50px] h-[50px] text-white"
+              className="animate-bounce-slow cursor-pointer absolute hidden lg:block bottom-0 mb-[15vh] ml-[13vw] w-[50px] h-[50px] text-white"
             />
           </motion.h1>
         )}

@@ -15,46 +15,31 @@ export default function Card({ project }: CardProps) {
         layout
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.5 } }} // 사라지는 애니메이션
-        className="border relative w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-[30vh] perspective-[1000px] rounded-3xl overflow-hidden shadow-3xl"
+        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.5 } }}
+        className="border-gray-500 border-4 relative w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-[30vh] perspective-[1000px] rounded-3xl overflow-hidden shadow-3xl"
       >
         {/* 카드 컨테이너 */}
-        <div className="w-full h-full transition-all duration-500 transform-style-preserve-3d hover:opacity-100">
+        <div className="w-full h-full transition-all duration-500 transform-style-preserve-3d hover:opacity-100 group">
           {/* 카드 앞면 */}
-          <div className="bg-white absolute w-full h-full rounded-lg ">
-            {" "}
-            {/* 여기에 rounded-lg 추가 */}
+          <div className=" bg-white absolute w-full h-full rounded-lg">
             <img
               src={project.thumbnail}
               alt={project.title}
-              className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-50"
+              className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-20" // 호버 시 오퍼시티 0.2
             />
           </div>
 
-          {/* 카드 뒷면 - 호버 시 나타나는 텍스트 */}
-          <div className="absolute w-full h-full p-4 bg-white text-black opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-between items-center text-center overflow-hidden rounded-lg">
-            {" "}
-            {/* 여기에 rounded-lg 추가 */}
-            <div className="overflow-y-scroll h-full w-full">
-              <h2 className="text-lg font-bold">{project.title}</h2>
-              <p className="text-sm mt-2">{project.subtitle}</p>
-              <p className="text-sm mt-1">{`기간: ${project.period}`}</p>
-              <p className="text-sm mt-1">{`역할: ${project.role}`}</p>
-
-              {/* 사용 스택 */}
-              <div className="mt-2">
-                <h3 className="font-bold text-sm">사용 스택:</h3>
-                <ul className="text-xs mt-1">
-                  {project.stacks.map((tech: string, index: number) => (
-                    <li key={index}>{tech}</li>
-                  ))}
-                </ul>
-              </div>
-
+          {/* 카드 뒷면 */}
+          <div className="text-xl absolute w-full h-full py-2 px-4 bg-black text-white opacity-0 group-hover:opacity-85 transition-opacity duration-500 flex flex-col justify-between items-center text-center overflow-hidden rounded-lg">
+            <div className="overflow-y-auto h-full w-full py-4 px-2">
+              <h2 className="text-2xl">{project.title}</h2>{" "}
+              {/* 글자 크기 키움 */}
+              <p className=" mt-1 md:mt-2">{project.subtitle}</p>{" "}
               {/* 프로젝트 링크 */}
-              <div className="mt-2">
-                <h3 className="font-bold text-sm">프로젝트 링크:</h3>
-                <ul className="flex flex-col gap-2 text-xs my-2">
+              <div className="mt-3">
+                <h3 className="font-bold text-base">프로젝트 링크</h3>{" "}
+                {/* 글자 크기 키움 */}
+                <ul className="flex flex-col md:gap-1 text-xl">
                   {project.url.github && (
                     <li>
                       <a
@@ -99,8 +84,7 @@ export default function Card({ project }: CardProps) {
 
         <Link
           href={`/project/${project.id}`}
-          // target="_blank"
-          className="absolute bottom-2 right-2 p-3 rounded-full bg-violet-400 text-white text-sm hover:text-black transition-colors duration-500" // 여기에 rounded-full로 버튼 둥글게
+          className="absolute bottom-2 right-2 p-3 rounded-full bg-violet-400 text-white text-sm hover:text-black transition-colors duration-500"
         >
           보러가기
         </Link>

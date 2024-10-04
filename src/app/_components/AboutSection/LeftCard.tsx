@@ -19,9 +19,10 @@ export default function LeftCard() {
             priority={true}
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 200px"
+            draggable="false"
           />
         </div>
-        <div className="font-semibold text-2xl flex flex-col justify-center gap-[10px] text-bold">
+        <div className="font-semibold mt-[2px] text-2xl flex flex-col justify-center gap-[10px] text-bold">
           <div className="text-white flex mb-2 gap-2 flex-col">
             <p className="flex flex-row gap-2 items-center text-center">
               <FaRegAddressCard />

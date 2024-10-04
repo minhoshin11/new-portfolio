@@ -11,7 +11,7 @@ export type ProjectType = {
   role: string[];
   solving: { problem: string; solve: string }[];
   url: {
-    Retrospective: string | null;
+    Retrospective?: string | null;
     github: string | null;
     video?: string | null;
     site?: string | null;
@@ -119,49 +119,40 @@ export const projectData: ProjectType[] = [
     ],
     tag: ["All", "react"],
   },
-  // {
-  //   id: 3,
-  //   thumbnail: "/coding.jpg", // 실제 이미지 경로를 입력하세요
-  //   title: "Portfolio Website",
-  //   subtitle: "나중에 블로그 ㄱ",
-  //   purpose: "이게 내 플젝 목표",
-  //   period: "2023.12.24 - 2023.12.31",
-  //   role: [""] ,
-  //   division: "Solo Project",
-  //   members: "1인",
-  //   stacks: [
-  //     "Typescript",
-  //     "Tailwind-css",
-  //     "Next.js",
-  //     "React",
-  //     "Framer-motion",
-  //     "Vercel",
-  //     "Figma",
-  //   ],
-  //   url: {
-  //     Retrospective: "대충 암거나",
-  //     github: "https://github.com/ko9612/portfolio_website",
-  //     video: null,
-  //   },
-
-  //   slideImg: [
-  //     "path/to/portfolio_slide2.jpg",
-  //     "path/to/portfolio_slide3.jpg",
-  //     "path/to/portfolio_slide4.jpg",
-  //     "path/to/portfolio_slide5.jpg",
-  //     "path/to/portfolio_slide6.jpg",
-  //   ],
-  //   solving: [
-  //     {
-  //       problem: "이것이 문제였고",
-  //       solve: "이걸 고쳤습니다",
-  //     },
-  //     { problem: "이게 문제2", solve: "이게 문제해결2" },
-  //   ],
-  //   tag: ["All", "next.js"],
-  // },
   {
-    id: 4,
+    id: 3,
+    thumbnail: "https://ifh.cc/g/s9y3cT.jpg", // 실제 이미지 경로를 입력하세요
+    title: "Portfolio-frist",
+    subtitle: "처음으로 만드는 포트폴리오",
+    purpose: "내가 어떤사람인지 알리기 위함",
+    period: "2024.06.03 - 2024.06.17",
+    role: [""],
+    division: "Solo Project",
+    members: "1인",
+    stacks: ["React", "Typescript", "CSS-Modules", "React-icons", "netlify"],
+    url: {
+      site: "https://minhoshin.netlify.app/",
+      github: "https://github.com/minhoshin11/portfolio",
+    },
+
+    slideImg: [
+      "https://ifh.cc/g/s9y3cT.jpg",
+      "https://ifh.cc/g/SJdnG3.jpg",
+      "https://ifh.cc/g/F6oX9n.jpg",
+      "https://ifh.cc/g/J4WgLo.jpg",
+      "https://ifh.cc/g/s6SZdA.jpg",
+    ],
+    solving: [
+      {
+        problem: "이것이 문제였고",
+        solve: "이걸 고쳤습니다",
+      },
+      { problem: "이게 문제2", solve: "이게 문제해결2" },
+    ],
+    tag: ["All", "react"],
+  },
+  {
+    id: 5,
     thumbnail: "https://ifh.cc/g/T4jdjC.jpg", // 실제 이미지 경로를 입력하세요
     title: "Flaw Detector",
     subtitle: "코드 취약점 솔루션",
@@ -174,7 +165,7 @@ export const projectData: ProjectType[] = [
       "client-server firebase 연동",
       "검사페이지 북마크",
     ],
-    division: "Solo Project",
+    division: "Team Project",
     members: "Front 5명",
     stacks: [
       "Typescript",
@@ -206,6 +197,50 @@ export const projectData: ProjectType[] = [
       "https://ifh.cc/g/AS9r6j.jpg", //테스트3
       "https://ifh.cc/g/Zykthg.jpg", //search1
       "https://ifh.cc/g/lh0gN8.jpg", //search2
+    ],
+    solving: [
+      {
+        problem: "이것이 문제였고",
+        solve: "이걸 고쳤습니다",
+      },
+      { problem: "이게 문제2", solve: "이게 문제해결2" },
+    ],
+    tag: ["All", "next.js"],
+  },
+  {
+    id: 6,
+    thumbnail: "https://ifh.cc/g/3jkHSV.jpg", // 실제 이미지 경로를 입력하세요
+    title: "New Portfolio(반응형)",
+    subtitle: "두번째로 만드는 포트폴리오",
+    purpose: "어떤 기기에서도 볼 수 있는 포트폴리오",
+    period: "2024.09.24 - 진행중",
+    role: ["프로젝트 역할"],
+    division: "Team Project",
+    members: "Front 5명",
+    stacks: [
+      "Typescript",
+      "Tailwind-css",
+      "Next.js",
+      "Firebase",
+      "lamma 3",
+      "Framer-motion",
+      "Storybook",
+      "Google-Translate",
+      "dotenv",
+      "pupeteer",
+    ],
+    url: {
+      Retrospective: "대충 암거나",
+      github: "https://github.com/hyeonji1125/sfacspace-06-project",
+      site: "https://sfacspace-06-project.vercel.app/",
+    },
+
+    slideImg: [
+      "https://ifh.cc/g/3jkHSV.jpg",
+      "https://ifh.cc/g/qYhsVn.jpg",
+      "https://ifh.cc/g/n2G6N0.jpg",
+      "https://ifh.cc/g/PjT4Vq.jpg",
+      "https://ifh.cc/g/5D9HAv.jpg",
     ],
     solving: [
       {

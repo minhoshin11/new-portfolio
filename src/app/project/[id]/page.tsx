@@ -22,10 +22,10 @@ export default function Page() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="z-10 p-10 flex flex-col  relative w-full bg-black overflow-hidden "
+        className="font-medium z-10 p-10 flex flex-col  relative w-full bg-black overflow-hidden "
       >
         <Link href="/#projectSection" className="flex w-[50px] h-[50px]">
-          <MdOutlineArrowBack className="flex w-[50px] h-[50px] hover:text-blue-400 transition-colors duration-300" />
+          <MdOutlineArrowBack className=" flex w-[50px] h-[50px] hover:text-blue-400 transition-colors duration-300" />
         </Link>
 
         <div className="flex w-full items-center justify-center flex-col mt-[5vh] sm:mt-[0] sm:mb-[3vh] gap-2">
@@ -33,16 +33,17 @@ export default function Page() {
           <h3 className="text-2xl font-medium">{project?.subtitle}</h3>
         </div>
         {/* 상세내역들 */}
-        <div className="flex flex-col lg:flex-row flex-start w-full lg:mx-[3vw] py-[3vh] gap-14 px-1">
+        <div className="flex flex-col lg:flex-row flex-start w-full lg:mx-[3vw] py-[3vh] gap-14 px-[3vw]">
           <ImageCarousel project={project} />
           <div className="flex flex-col justify-start gap-4 items-start lg:mx-0 mx-[5vw]">
-            <h4 className="w-[150px] border border-blue-400 bg-blue-800 text-2xl rounded-3xl flex justify-center p-1">
+            <h4 className=" border border-blue-400 bg-blue-800 text-2xl font-bold rounded-3xl flex justify-center px-3 py-1">
               {project?.division}
             </h4>
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-blue-500">목표</p>
               <p className="flex gap-2 items-center text-xl">
-                <FiTarget className="hidden md:block" /> {project?.purpose}
+                <FiTarget className="hidden md:block" />
+                {project?.purpose}
               </p>
             </div>
             <div className="flex flex-col gap-2">
@@ -60,7 +61,7 @@ export default function Page() {
 
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-blue-500 ">Stack</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 font-semibold">
                 {project?.stacks.map((stack, i) => {
                   return (
                     <li
@@ -76,7 +77,7 @@ export default function Page() {
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-blue-500 ">프로젝트 역할</p>
 
-              <ul className="flex gap-2 flex-wrap">
+              <ul className="flex gap-2 flex-wrap font-semibold">
                 {project?.role.map((item, index) => {
                   return (
                     <li
@@ -90,11 +91,11 @@ export default function Page() {
               </ul>
             </div>
             <div className="my-1 flex gap-2 flex-col">
-              <h3 className="text-blue-500 text-2xl">문제 및 해결</h3>
+              <h3 className="text-blue-500 text-2xl font-bold">트러블 슈팅</h3>
               {project?.solving.map((item, index) => (
                 <div key={index} className="ml-2 mb-2">
                   <p className=" text-[21px]">
-                    <span className="text-red-500">문제 - </span> {item.problem}
+                    <span>문제 - </span> {item.problem}
                   </p>
                   <p className=" text-[21px]">
                     <span className="text-green-500">해결 - </span> {item.solve}

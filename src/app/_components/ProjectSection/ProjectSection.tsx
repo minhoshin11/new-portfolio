@@ -61,7 +61,7 @@ export default function ProjectSection() {
     <section
       ref={sectionRef}
       id="projectSection"
-      className="z-10 text-white flex items-center flex-col relative w-full gap-10 py-7 pb-[25vh] bg-black overflow-hidden"
+      className="font-medium z-10 text-white flex items-center flex-col relative w-full gap-10 py-7 pb-[25vh] bg-black overflow-hidden"
     >
       <motion.h1
         initial="hidden"
@@ -95,8 +95,9 @@ export default function ProjectSection() {
       </div>
 
       {/* 필터링된 프로젝트 렌더링 */}
+
       <motion.div
-        className="flex flex-wrap justify-center gap-7"
+        className="w-[100vw] flex flex-col items-center sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-start sm:px-[5vw]"
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
         variants={fadeIn}
