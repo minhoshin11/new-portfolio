@@ -27,7 +27,7 @@ export const projectData: ProjectType[] = [
     title: "Landing",
     subtitle: "한국인과 한국에 사는 외국인의 커뮤니티",
     purpose: "외국인의 한국생활 정착을 목표",
-    period: "2024.30.26 ~ 2024.04.26",
+    period: "2024.03.30 ~ 2024.04.26",
     role: [
       "project build",
       "로그인",
@@ -62,10 +62,15 @@ export const projectData: ProjectType[] = [
     ],
     solving: [
       {
-        problem: "이것이 문제였고",
-        solve: "이걸 고쳤습니다",
+        problem:
+          "로그인,로그아웃의 상태가 즉각적으로 네브바에 반영이 안되는 문제",
+        solve: "contextAPI를 사용해 로그인상태를 전역적으로 관리",
       },
-      { problem: "이게 문제2", solve: "이게 문제해결2" },
+      {
+        problem:
+          "폴더구조가 직관적이지 않아 컴포넌트를 찾는 시간을 상당히 할애",
+        solve: "Apis,Components,Context,Pages 등 직관적으로 폴더를 나눔",
+      },
     ],
     tag: ["All", "react"],
   },
@@ -112,10 +117,13 @@ export const projectData: ProjectType[] = [
     ],
     solving: [
       {
-        problem: "이것이 문제였고",
-        solve: "이걸 고쳤습니다",
+        problem: "netlify 배포 불가오류",
+        solve: "검색 -> netlify.toml 필요 -> 틀에 맞춰 작성",
       },
-      { problem: "이게 문제2", solve: "이게 문제해결2" },
+      {
+        problem: "async처리된 axios함수의 Refresh-Token 무한 Get요청",
+        solve: "Refresh-Token 기한마저 끝일 때 로그아웃 로직 구현",
+      },
     ],
     tag: ["All", "react"],
   },
@@ -126,7 +134,7 @@ export const projectData: ProjectType[] = [
     subtitle: "처음으로 만드는 포트폴리오",
     purpose: "내가 어떤사람인지 알리기 위함",
     period: "2024.06.03 - 2024.06.17",
-    role: [""],
+    role: ["모든 부분"],
     division: "Solo Project",
     members: "1인",
     stacks: ["React", "Typescript", "CSS-Modules", "React-icons", "netlify"],
@@ -144,10 +152,9 @@ export const projectData: ProjectType[] = [
     ],
     solving: [
       {
-        problem: "이것이 문제였고",
-        solve: "이걸 고쳤습니다",
+        problem: "기획,디자인에 대한 어려움",
+        solve: "피그마를 활용해 초안을 구성하고 코딩",
       },
-      { problem: "이게 문제2", solve: "이게 문제해결2" },
     ],
     tag: ["All", "react"],
   },
@@ -180,7 +187,7 @@ export const projectData: ProjectType[] = [
       "pupeteer",
     ],
     url: {
-      Retrospective: "대충 암거나",
+      Retrospective: "https://dailycoding777.tistory.com/62",
       github: "https://github.com/hyeonji1125/sfacspace-06-project",
       site: "https://sfacspace-06-project.vercel.app/",
     },
@@ -200,10 +207,22 @@ export const projectData: ProjectType[] = [
     ],
     solving: [
       {
-        problem: "이것이 문제였고",
-        solve: "이걸 고쳤습니다",
+        problem: " SPA사이트 게시글주소가 변하지 않아 웹크롤링 불가",
+        solve: "라이브러리 cheerio->pupeteer로 변경 후 사용",
       },
-      { problem: "이게 문제2", solve: "이게 문제해결2" },
+      {
+        problem: "node.js를 이용해 크롤링 번역 했을 때 403, Syntax 에러 발생",
+        solve: "콘솔확인 -> env리딩문제 -> undefined인 것을 확인, dotenv 사용",
+      },
+      {
+        problem: "북마크 클릭 시 페이지 리렌더링 (이벤트 버블링1)",
+        solve: "event.stopPropagation()라는 메소드를 사용하여 해결",
+      },
+      {
+        problem: "북마크목록버튼 더블클릭(이벤트 버블링2)",
+        solve:
+          "여백 클릭하면 목록을 닫는 기능 때문에 생긴문제 -> debounce를 적용",
+      },
     ],
     tag: ["All", "next.js"],
   },
@@ -214,9 +233,9 @@ export const projectData: ProjectType[] = [
     subtitle: "두번째로 만드는 포트폴리오",
     purpose: "어떤 기기에서도 볼 수 있는 포트폴리오",
     period: "2024.09.24 - 진행중",
-    role: ["프로젝트 역할"],
-    division: "Team Project",
-    members: "Front 5명",
+    role: ["모든 부분"],
+    division: "Solo Project",
+    members: "Front 1명",
     stacks: [
       "Typescript",
       "Tailwind-css",
@@ -230,9 +249,9 @@ export const projectData: ProjectType[] = [
       "pupeteer",
     ],
     url: {
-      Retrospective: "대충 암거나",
-      github: "https://github.com/hyeonji1125/sfacspace-06-project",
-      site: "https://sfacspace-06-project.vercel.app/",
+      Retrospective: "https://dailycoding777.tistory.com/63",
+      github: "https://github.com/minhoshin11/new-portfolio",
+      site: "https://www.shinminho.com/",
     },
 
     slideImg: [
@@ -244,10 +263,10 @@ export const projectData: ProjectType[] = [
     ],
     solving: [
       {
-        problem: "이것이 문제였고",
-        solve: "이걸 고쳤습니다",
+        problem: "도메인 구매 후 https 사용불가",
+        solve:
+          "AWS Certificate Manager에서 구매한 사이트 주소로 ssl인증서 발급",
       },
-      { problem: "이게 문제2", solve: "이게 문제해결2" },
     ],
     tag: ["All", "next.js"],
   },

@@ -16,7 +16,7 @@ export default function Card({ project }: CardProps) {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.5 } }}
-        className="border-gray-500 border-4 relative w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-[30vh] perspective-[1000px] rounded-3xl overflow-hidden shadow-3xl"
+        className="border-gray-500 border-4 relative w-[80vw] sm:w-[45vw] md:w-[28vw] 2xl:w-[20vw] h-[30vh] perspective-[1000px] rounded-3xl overflow-hidden shadow-3xl"
       >
         {/* 카드 컨테이너 */}
         <div className="w-full h-full transition-all duration-500 transform-style-preserve-3d hover:opacity-100 group">

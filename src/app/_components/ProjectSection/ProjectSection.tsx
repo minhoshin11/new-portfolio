@@ -97,7 +97,11 @@ export default function ProjectSection() {
       {/* 필터링된 프로젝트 렌더링 */}
 
       <motion.div
-        className="w-[100vw] flex flex-col items-center sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-start sm:px-[5vw]"
+        className={`flex items-center ${
+          selectedProjects.length <= 3
+            ? "justify-center flex-row"
+            : "sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex-col"
+        } gap-4 justify-items-center sm:px-[5vw]`}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
         variants={fadeIn}

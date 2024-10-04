@@ -10,6 +10,7 @@ import { BsPencilSquare } from "react-icons/bs";
 import { FaCamera, FaGithub } from "react-icons/fa";
 import { FiTarget } from "react-icons/fi";
 import { MdOutlineArrowBack, MdPeopleAlt } from "react-icons/md";
+import { SiSitecore } from "react-icons/si";
 import { SlCalender } from "react-icons/sl";
 
 export default function Page() {
@@ -97,7 +98,7 @@ export default function Page() {
                   <p className=" text-[21px]">
                     <span>문제 - </span> {item.problem}
                   </p>
-                  <p className=" text-[21px]">
+                  <p className=" text-[21px] text-green-400">
                     <span className="text-green-500">해결 - </span> {item.solve}
                   </p>
                 </div>
@@ -107,12 +108,21 @@ export default function Page() {
             <div className="flex flex-col gap-2 pb-[20vh]">
               <p className="font-bold text-2xl text-blue-500">Link</p>
               <div className="flex gap-8">
-                <Link target="_blank" href={`${project?.url.Retrospective}`}>
-                  <BsPencilSquare className="w-[40px] h-[40px]" />
-                </Link>
-                <Link target="_blank" href={`${project?.url.video}`}>
-                  <FaCamera className="w-[40px] h-[40px]" />
-                </Link>
+                {project?.url.Retrospective && (
+                  <Link target="_blank" href={`${project?.url.Retrospective}`}>
+                    <BsPencilSquare className="w-[40px] h-[40px]" />
+                  </Link>
+                )}
+                {project?.url.video && (
+                  <Link target="_blank" href={`${project?.url.video}`}>
+                    <FaCamera className="w-[40px] h-[40px]" />
+                  </Link>
+                )}
+                {project?.url.site && (
+                  <Link target="_blank" href={`${project?.url.site}`}>
+                    <SiSitecore className="w-[40px] h-[40px]" />
+                  </Link>
+                )}
                 <Link target="_blank" href={`${project?.url.github}`}>
                   <FaGithub className="w-[40px] h-[40px]" />
                 </Link>
