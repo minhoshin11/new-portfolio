@@ -41,11 +41,11 @@ export default function HeroSection() {
           <motion.h1
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex mb-[15vh] flex-row h-[70px] items-center text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white"
+            className="flex mb-[15vh] flex-row h-[70px] items-center text-3xl sm:text-5xl lg:text-5xl font-extrabold text-white"
           >
             <TypeAnimation
               sequence={[
-                "라이브러리 호환성을 중요시하는",
+                "라이브러리 호환성이 중요한",
                 3000,
                 "Front-End 신민호입니다.",
                 3000,
@@ -64,7 +64,7 @@ export default function HeroSection() {
                 repeatType: "reverse",
                 duration: 0.5,
               }}
-              className="pb-[10px] pl-1"
+              className="pl-1 md:block"
             >
               |
             </motion.span>

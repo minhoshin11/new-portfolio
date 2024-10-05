@@ -64,7 +64,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="z-20 flex h-[60px] items-center py-4 px-8 justify-between text-white fixed mx-auto top-0 left-0 right-0 bg-[#121212] bg-opacity-90 border-b border-[#33353F]">
+    <nav className="z-20 flex h-[60px] items-center py-4 px-4 sm:px-8 justify-between text-white fixed mx-auto top-0 left-0 right-0 bg-[#121212] bg-opacity-90 border-b border-[#33353F]">
       <a
         onClick={() => handleScroll("#heroSection")} // 클릭 이벤트 추가
         className={`text-2xl font-semibold ${minhoShinColor} hover:text-red-500 transition-colors duration-500 cursor-pointer`}

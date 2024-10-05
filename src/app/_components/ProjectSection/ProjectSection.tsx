@@ -99,7 +99,7 @@ export default function ProjectSection() {
       <motion.div
         className={`flex items-center ${
           selectedProjects.length <= 3
-            ? "justify-center flex-row"
+            ? "justify-center flex-col sm:flex-row"
             : "sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex-col"
         } gap-4 justify-items-center sm:px-[5vw]`}
         initial="hidden"
