@@ -121,7 +121,7 @@ export const projectData: ProjectType[] = [
         solve: "검색 -> netlify.toml 필요 -> 틀에 맞춰 작성",
       },
       {
-        problem: "async처리된 axios함수의 Refresh-Token 무한 Get요청",
+        problem: "Refresh-Token 유효기간 종료 시 무한 Get요청",
         solve: "Refresh-Token 기한마저 끝일 때 로그아웃 로직 구현",
       },
     ],
@@ -164,7 +164,7 @@ export const projectData: ProjectType[] = [
     title: "Flaw Detector",
     subtitle: "코드 취약점 솔루션",
     purpose: "작성한 코드의 보안취약점을 AI llama3를 통해 분석 및 솔루션 제공",
-    period: "2024.08.05 - 진행중",
+    period: "2024.08.05 - 20204.10.28",
     role: [
       "웹크롤링 구현",
       "크롤링 번역",
@@ -207,7 +207,7 @@ export const projectData: ProjectType[] = [
     ],
     solving: [
       {
-        problem: " SPA사이트 게시글주소가 변하지 않아 웹크롤링 불가",
+        problem: "SPA사이트 게시글주소가 변하지 않아 웹크롤링 불가",
         solve: "라이브러리 cheerio->pupeteer로 변경 후 사용",
       },
       {
@@ -232,7 +232,7 @@ export const projectData: ProjectType[] = [
     title: "New Portfolio(반응형)",
     subtitle: "두번째로 만드는 포트폴리오",
     purpose: "어떤 기기에서도 볼 수 있는 포트폴리오",
-    period: "2024.09.24 - 진행중",
+    period: "2024.09.24 - 2024.10.10",
     role: ["모든 부분"],
     division: "Solo Project",
     members: "Front 1명",
