@@ -9,7 +9,7 @@ export type ProjectType = {
   members: string;
   stacks: string[];
   role: string[];
-  solving: { problem: string; solve: string }[];
+  solving: { problem: string; checked?: string; solve: string }[];
   url: {
     Retrospective?: string | null;
     github: string | null;
@@ -79,7 +79,7 @@ export const projectData: ProjectType[] = [
     thumbnail: "https://ifh.cc/g/j2GSv4.jpg", // 실제 이미지 경로를 입력하세요
     title: "Cook-Bap",
     subtitle: "1인가구를 위한 요리 커뮤니티",
-    purpose: "자취인,1인가구 등 남는 식재료를 이용한 레시피 공유 사이트",
+    purpose: "자취인,1인가구 등 남는 식재료를 이용한 레시피 공유",
     period: "2024.05.02~2024.05.31",
     role: [
       "Project Build",
@@ -159,7 +159,7 @@ export const projectData: ProjectType[] = [
     tag: ["All", "react"],
   },
   {
-    id: 5,
+    id: 4,
     thumbnail: "https://ifh.cc/g/T4jdjC.jpg", // 실제 이미지 경로를 입력하세요
     title: "Flaw Detector",
     subtitle: "코드 취약점 솔루션",
@@ -227,7 +227,7 @@ export const projectData: ProjectType[] = [
     tag: ["All", "next.js"],
   },
   {
-    id: 6,
+    id: 5,
     thumbnail: "https://ifh.cc/g/3jkHSV.jpg", // 실제 이미지 경로를 입력하세요
     title: "New Portfolio(반응형)",
     subtitle: "두번째로 만드는 포트폴리오",
@@ -266,6 +266,68 @@ export const projectData: ProjectType[] = [
         problem: "도메인 구매 후 https 사용불가",
         solve:
           "AWS Certificate Manager에서 구매한 사이트 주소로 ssl인증서 발급",
+      },
+    ],
+    tag: ["All", "next.js"],
+  },
+  {
+    id: 6,
+    thumbnail: "https://ifh.cc/g/noPNfZ.jpg", // 실제 이미지 경로를 입력하세요
+    title: "Meal&Mate",
+    subtitle: "밥 한끼 같이 먹을 사람들을 찾는 모임",
+    purpose: "개인화 된 사회에서 여러사람들과 먹는 한끼 식사",
+    period: "2024.11.25 - 2024.01.12",
+    role: ["메인페이지", "찜한 모임", "모임 생성", "공용컴포넌트 제작"],
+    division: "Team Project",
+    members: "Front 4명, Back 2명, Designer 1명 ",
+    stacks: [
+      "Typescript",
+      "Tailwind-css",
+      "Next.js",
+      "Tanstack-Query",
+      "React-hookform",
+      "zod",
+      "Husky",
+      "Framer-motion",
+      "kakao-maps",
+      "date-fns",
+      "cypress",
+      "jest",
+      "jira",
+    ],
+    url: {
+      Retrospective: "https://dailycoding777.tistory.com/73",
+      github: "https://github.com/FESI5-team9/Frontend",
+      site: "https://muckitlist.vercel.app/",
+    },
+
+    slideImg: [
+      "https://ifh.cc/g/noPNfZ.jpg",
+      "https://ifh.cc/g/gO5hb2.jpg",
+      "https://ifh.cc/g/jt79PZ.jpg",
+      "https://ifh.cc/g/Yb1RzQ.jpg",
+      "https://ifh.cc/g/Wf5tmL.jpg",
+      "https://ifh.cc/g/90LNhB.jpg",
+    ],
+    solving: [
+      {
+        problem:
+          "middleware.ts를 사용하지 않았는데 비로그인 시 '/'경로로 가는 현상",
+        checked:
+          "팀원이 작성한 코드 중 토큰 확인 실패 시 '/'으로 가는 것을 확인",
+        solve: " '/' -> window.location.href,redirect 속성 사용",
+      },
+      {
+        problem: "폼데이터 전송 시 토큰 값이 undefined로 전달됨. ",
+        checked: "httpOnly 속성이 true로 설정을 확인",
+        solve:
+          " 요청 헤더에 credentials: include 옵션을 추가해 next.js 서버에서 읽도록 작성 ",
+      },
+      {
+        problem: "모임 생성 시 키워드를 넣으면 ''['키워드']''로 저장되는 문제",
+        checked:
+          "백에서 JSON형태가 아닌 콤마구분으로 처리하고 프론트는 JSON 배열로 보내서 생긴 것을 확인",
+        solve: " 키워드를 문자열 형태로 콤마 찍어서 백으로 전송",
       },
     ],
     tag: ["All", "next.js"],

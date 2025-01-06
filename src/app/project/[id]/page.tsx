@@ -91,13 +91,18 @@ export default function Page() {
                 })}
               </ul>
             </div>
-            <div className="my-1 flex gap-2 flex-col">
+            <div className="my-1 flex gap-3 flex-col">
               <h3 className="text-blue-500 text-2xl font-bold">트러블 슈팅</h3>
               {project?.solving.map((item, index) => (
                 <div key={index} className="ml-2 mb-2">
                   <p className=" text-[21px]">
-                    <span>문제 - </span> {item.problem}
+                    <span>문제 {index + 1}: </span> {item.problem}
                   </p>
+                  {item.checked && (
+                    <p className=" text-[21px] text-blue-300">
+                      <span>확인 - </span> {item.checked}
+                    </p>
+                  )}
                   <p className=" text-[21px] text-green-400">
                     <span className="text-green-500">해결 - </span> {item.solve}
                   </p>
