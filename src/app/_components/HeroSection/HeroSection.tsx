@@ -45,7 +45,7 @@ export default function HeroSection() {
           >
             <TypeAnimation
               sequence={[
-                "라이브러리 호환성이 중요한",
+                "효율적인 문제해결과 성장을 지향하는",
                 3000,
                 "Front-End 신민호입니다.",
                 3000,

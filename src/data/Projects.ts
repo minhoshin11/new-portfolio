@@ -298,7 +298,7 @@ export const projectData: ProjectType[] = [
     url: {
       Retrospective: "https://dailycoding777.tistory.com/73",
       github: "https://github.com/FESI5-team9/Frontend",
-      site: "https://muckitlist.vercel.app/",
+      video: "https://youtu.be/65ZfdEd5Ofw",
     },
 
     slideImg: [
